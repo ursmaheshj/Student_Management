@@ -17,5 +17,16 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
+    #Common URL's
     path('admin/', admin.site.urls),
+
+    #Admin URL's
+
+
+    #Teacher URL's
+
+
+    #Student URL's
+
+
 ]
