@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.http.response import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
-from Main_App.models import CustomUser, Teacher, Student
+from Main_App.models import MyUser, Teacher, Student
 
 
 # Create your views here.
@@ -27,7 +27,7 @@ def saveteacher(request):
         address = request.POST.get('address')
         gender = request.POST.get('gender')
     try :
-        user = CustomUser.objects.create_user(username=username,password=password,email=email,first_name=firstname,last_name=lastname,user_type=2)
+        user = MyUser.objects.create_user(username=username,password=password,email=email,first_name=firstname,last_name=lastname,user_type=2)
         user.teacher.address=address
         user.teacher.gender=gender        
         user.save()
@@ -58,7 +58,7 @@ def savestudent(request):
         medium = request.POST.get('medium')
         std = request.POST.get('std')
     try :
-        user = CustomUser.objects.create_user(username=username,password=password,email=email,first_name=firstname,last_name=lastname,user_type=3)
+        user = MyUser.objects.create_user(username=username,password=password,email=email,first_name=firstname,last_name=lastname,user_type=3)
         user.student.address=address
         user.student.gender=gender   
         user.student.medium=medium 
