@@ -6,13 +6,13 @@ from django.dispatch import receiver
 
 # Create your models here.
 
-class CustomUser(AbstractUser):
+class MyUser(AbstractUser):
     user_types = ((1,'Admin'),(2,'Teacher'),(3,'Student'))
     user_type = models.CharField(default=1,choices=user_types,max_length=10)
 
 class Admin(models.Model):
     id = models.AutoField(primary_key=True)
-    admin = models.OneToOneField(CustomUser,on_delete=models.CASCADE)
+    admin = models.OneToOneField(MyUser,on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True) 
     objects = models.Manager()
@@ -20,7 +20,7 @@ class Admin(models.Model):
 class Teacher(models.Model):
     gender_choices = (('Male','Male'),('Female','Female'),('Other','Other'))
     id = models.AutoField(primary_key=True)
-    admin = models.OneToOneField(CustomUser,on_delete=models.CASCADE)
+    admin = models.OneToOneField(MyUser,on_delete=models.CASCADE)
     gender = models.CharField(max_length=15,choices=gender_choices,default='Other')
     address = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -32,7 +32,7 @@ class Student(models.Model):
     gender_choices = (('Male','Male'),('Female','Female'),('Other','Other'))
     std_choices = ((1,1),(2,2),(3,3),(4,4),(5,5),(6,6))
     id = models.AutoField(primary_key=True)
-    admin = models.OneToOneField(CustomUser,on_delete=models.CASCADE)
+    admin = models.OneToOneField(MyUser,on_delete=models.CASCADE)
     gender = models.CharField(max_length=15,choices=gender_choices,default='Other')
     std = models.CharField(max_length=10,choices=std_choices)
     medium = models.CharField(max_length=15 ,choices=medium_choices, default='Marathi')
@@ -49,7 +49,7 @@ class Notification(models.Model):
     objects = models.Manager()
 
 
-@receiver(post_save,sender=CustomUser)
+@receiver(post_save,sender=MyUser)
 def user_create(sender,instance,created,**kwargs):
     if created:
         if instance.user_type == 1:
@@ -59,7 +59,7 @@ def user_create(sender,instance,created,**kwargs):
         if instance.user_type == 3:
             Student.objects.create(admin=instance)
 
-@receiver(post_save,sender=CustomUser)
+@receiver(post_save,sender=MyUser)
 def user_save(sender,instance,**kwargs):
         if instance.user_type == 1:
             instance.admin.save()
