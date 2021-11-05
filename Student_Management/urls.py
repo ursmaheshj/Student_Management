@@ -18,14 +18,24 @@ from django.urls import path,include
 from Student_Management import settings
 from django.conf.urls.static import static
 
-from Main_App import views,adminViews,studentViews,teacherViews
+from Main_App import views,v_admin,v_student,v_teacher
 
 urlpatterns = [
     #Common URL's
     path('admin/', admin.site.urls),
     path('', views.index),
+    path('loginpage/', views.loginpage),
+    path('loginuser',views.loginuser),
+    path('logoutuser',views.logoutuser),
 
     #Admin URL's
+    path('adminhome/', v_admin.a_home),
+    path('addteacher/',v_admin.addteacher,name='addteacher'),
+    path('saveteacher',v_admin.saveteacher),
+    path('addstudent/',v_admin.addstudent,name='addstudent'),
+    path('savestudent',v_admin.savestudent),
+    path('manageteacher',v_admin.manageteacher,name='manageteacher'),
+    path('managestudent',v_admin.managestudent,name='managestudent'),
 
 
     #Teacher URL's

@@ -71,3 +71,10 @@ def savestudent(request):
         messages.error(request,"Failed to add student")
         return HttpResponseRedirect("/addstudent")
 
+def manageteacher(request):
+    teachers = Teacher.objects.all()
+    return render(request,'admin/a_manageteacher.html',{'teachers':teachers})
+
+def managestudent(request):
+    students = Student.objects.all()
+    return render(request,'admin/a_managestudent.html',{'students':students})

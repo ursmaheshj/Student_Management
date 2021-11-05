@@ -32,12 +32,6 @@ def loginuser(request):
             messages.error(request,"Invalid login details..!")
             return HttpResponseRedirect("/")
 
-def userprofile(request):
-    if request.user != None:
-        return HttpResponse("User : "+request.user.email+" UserType"+request.user.user_type )
-    else :
-        return HttpResponse("Please login first")
-
 def logoutuser(request):
     logout(request)
     return HttpResponseRedirect('/index')
