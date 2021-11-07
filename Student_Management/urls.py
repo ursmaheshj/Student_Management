@@ -46,9 +46,9 @@ urlpatterns = [
 
     #Teacher URL's
     path('teacherhome/', v_teacher.t_home),
-    path('t_addstudent/', v_teacher.t_addstudent),
-    path('viewstudent/', v_teacher.viewstudent),
-    path('t_addnotification/', v_teacher.t_addnotification),
+    #path('t_addstudent/', v_teacher.t_addstudent),
+    #path('viewstudent/', v_teacher.viewstudent),
+    #path('t_addnotification/', v_teacher.t_addnotification),
 
     
     #Student URL's
