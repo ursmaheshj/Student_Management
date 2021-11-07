@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   
+    <link rel="stylesheet" type="text/css" href="{% static 'kagne/css/mycss.css' %}" >
+    <title>Login</title>
+</head>
+<body>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+<div id="formHeader">
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="{% static 'kagne/images/infinity.png' %}" id="icon" alt="User Icon" />
+    </div> 
+</div>
+<h1></h1>
+    {% if messages %}
+    {% for message in messages %}
+    <div id="error"> {{message}} </div>
+    {% endfor %}
+    {% endif %}
+   
+    <!-- Login Form -->
+    <form action="/loginuser" method='POST'>
+    {% csrf_token %}
+      <input type="email" id="email" class="fadeIn second" name="email" placeholder="email" required>
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" required>
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+    
+  </div>
+</div>
+     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
