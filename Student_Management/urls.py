@@ -29,19 +29,31 @@ urlpatterns = [
     path('logoutuser',views.logoutuser),
 
     #Admin URL's
-    path('adminhome/', v_admin.a_home),
+    path('adminhome/', v_admin.a_home,name='adminhome'),
     path('addteacher/',v_admin.addteacher,name='addteacher'),
     path('saveteacher',v_admin.saveteacher),
     path('addstudent/',v_admin.addstudent,name='addstudent'),
     path('savestudent',v_admin.savestudent),
-    path('manageteacher',v_admin.manageteacher,name='manageteacher'),
-    path('managestudent',v_admin.managestudent,name='managestudent'),
-
+    path('manageteacher/',v_admin.manageteacher,name='manageteacher'),
+    path('managestudent/',v_admin.managestudent,name='managestudent'),
+    path('editteacher/<int:teacher_id>',v_admin.editteacher,name='editteacher'),
+    path('saveeditteacher',v_admin.saveeditteacher),
+    path('editstudent/<int:student_id>',v_admin.editstudent,name='editstudent'),
+    path('saveeditstudent',v_admin.saveeditstudent),
+    path('a_addnotification/',v_admin.a_addnotification,name="a_addnotification"),
+    path('savenotification',v_admin.savenotification),
+    path('managenotification/',v_admin.managenotification,name='managenotification'),
 
     #Teacher URL's
+    path('teacherhome/', v_teacher.t_home),
+    path('t_addstudent/', v_teacher.t_addstudent),
+    path('viewstudent/', v_teacher.viewstudent),
+    path('t_addnotification/', v_teacher.t_addnotification),
 
-
+    
     #Student URL's
+    path('studenthome/', v_student.s_home)
 
+    
 
-]
+]#+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
