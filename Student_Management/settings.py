@@ -121,6 +121,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Auth User Model
+
+AUTH_USER_MODEL = "Main_App.MyUser"
+
+# Authentication Backend
+
+AUTHENTICATION_BACKENDS = ['Main_App.EmailAuthentication.EmailAuth']
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
