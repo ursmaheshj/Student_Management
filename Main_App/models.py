@@ -43,8 +43,10 @@ class Student(models.Model):
 
 class Notification(models.Model):
     id = models.AutoField(primary_key=True)
+    heading = models.CharField(max_length=150)
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+    created_by = models.CharField(max_length=20)
     updated_at = models.DateTimeField(auto_now=True)
     objects = models.Manager()
 
