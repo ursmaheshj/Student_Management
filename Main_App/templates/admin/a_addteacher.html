@@ -1,0 +1,66 @@
+{% extends 'admin/a_base.html' %}
+
+{% block content %}
+
+<main class="content">
+				<div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">Add Teacher</h1>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card">
+							{% if messages %}
+						{% for message in messages  %}
+						 {{message}}
+						{% endfor %}
+						{% endif %}
+								<div class="card-body">
+									<form action="/saveteacher" method="POST">
+									{% csrf_token %}
+										<div class="mb-3">
+											<label class="form-label">Email address</label>
+											<input type="email" class="form-control" placeholder="Email" name="email">
+										</div>
+										<div class="mb-3">
+											<label class="form-label">Username</label>
+											<input type="text" class="form-control" placeholder="Username" name="username">
+										</div>
+										<div class="mb-3">
+											<label class="form-label">Password</label>
+											<input type="password" class="form-control" placeholder="Password" name="password">
+										</div>
+										<div class="mb-3">
+											<label class="form-label">First Name</label>
+											<input type="text" class="form-control" placeholder="First Name" name="firstname">
+										</div>
+										<div class="mb-3">
+											<label class="form-label">Last Name</label>
+											<input type="text" class="form-control" placeholder="Last Name" name="lastname">
+										</div>
+										<div class="mb-3">
+											<label class="form-label" for="gender">Gender</label>
+												<select id="gender" class="form-control" name="gender">
+													<option value="#" selected>--Select--</option>
+													{% for k,v in genders %}
+													<option value={{k}}>{{v}}</option>
+													{% endfor %}
+												</select>
+										</div>
+										<div class="mb-3">
+											<label class="form-label">Address</label>
+											<input type="text" class="form-control" placeholder="Address" name="address">
+										</div>
+										<div class="mb-3">
+										<button type="submit" class="form-control btn btn-primary">Submit</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						
+						</div>
+						
+			</main>
+
+
+{% endblock %}

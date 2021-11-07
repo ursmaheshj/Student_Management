@@ -1,0 +1,65 @@
+{% extends 'admin/a_base.html' %}
+
+{% block content %}
+
+<main class="content">
+        <div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">Tables</h1>
+					<div class="col-12">
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title">Always responsive</h5>
+									<h6 class="card-subtitle text-muted">Across every breakpoint, use <code>.table-responsive</code> for horizontally scrolling tables.</h6>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-striped mb-0 ">
+										<thead>
+											<tr>
+												<th scope="col">ID</th>
+												<th scope="col">First Name</th>
+												<th scope="col">Last Name</th>
+												<th scope="col">Username</th>
+												<th scope="col">Email</th>
+												<th scope="col">Gender</th>
+												<th scope="col">Class</th>
+												<th scope="col">Medium</th>
+												<th scope="col">Address</th>
+												<th scope="col">Created At</th>
+                                                <th scope="col">Updated At</th>
+                                                <th scope="col">Action</th>
+											</tr>
+										</thead>
+										<tbody>
+                                        {% for student in students %}
+											<tr>
+												<th scope="row">{{student.admin.id}}</th>
+												<td>{{student.admin.first_name}}</td>
+												<td>{{student.admin.last_name}}</td>
+												<td>{{student.admin.username}}</td>
+												<td>{{student.admin.email}}</td>
+												<td>{{student.gender}}</td>
+                                                <td>{{student.std}}</td>
+												<td>{{student.medium}}</td>
+												<td>{{student.address}}</td>
+												<td>{{student.created_at}}</td>
+                                                <td>{{student.updated_at}}</td>
+												<td>
+                                                <a href="/editstudent/{{student.admin.id}}"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                                </td>
+											</tr>
+                                            {% endfor %}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+			
+</main>
+			
+
+
+{% endblock %}

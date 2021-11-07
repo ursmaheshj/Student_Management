@@ -1,0 +1,52 @@
+{% extends 'admin/a_base.html' %}
+
+{% block content %}
+
+<main class="content">
+        <div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">Tables</h1>
+					<div class="col-12">
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title">Always responsive</h5>
+									<h6 class="card-subtitle text-muted">Across every breakpoint, use <code>.table-responsive</code> for horizontally scrolling tables.</h6>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-striped mb-0 ">
+										<thead>
+											<tr>
+												<th scope="col">ID</th>
+												<th scope="col">Heading</th>
+												<th scope="col">Message</th>
+												<th scope="col">Created by</th>
+												<th scope="col">Created At</th>
+                                                <th scope="col">Updated At</th>
+                                                <th scope="col">Action</th>
+											</tr>
+										</thead>
+										<tbody>
+                                        {% for notification in notifications %}
+											<tr>
+												<th scope="row">{{notification.id}}</th>
+												<td>{{notification.heading}}</td>
+												<td>{{notification.message}}</td>
+												<td>{{notification.created_by}}</td>
+                                                <td>{{notification.created_at}}</td>
+                                                <td>{{notification.updated_at}}</td>
+												<td>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                                </td>
+											</tr>
+                                            {% endfor %}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+			
+</main>
+
+{% endblock %}
