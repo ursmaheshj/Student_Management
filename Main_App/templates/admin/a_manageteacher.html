@@ -5,13 +5,9 @@
 <main class="content">
         <div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3">Tables</h1>
+					<h1 class="h3 mb-3">Manage Teachers</h1>
 					<div class="col-12">
 							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title">Always responsive</h5>
-									<h6 class="card-subtitle text-muted">Across every breakpoint, use <code>.table-responsive</code> for horizontally scrolling tables.</h6>
-								</div>
 								<div class="table-responsive">
 									<table class="table table-striped mb-0 ">
 										<thead>
@@ -19,7 +15,7 @@
 												<th scope="col">ID</th>
 												<th scope="col">First Name</th>
 												<th scope="col">Last Name</th>
-												<th scope="col">Username</th>
+												<th scope="col">Teacher Code</th>
 												<th scope="col">Email</th>
 												<th scope="col">Gender</th>
 												<th scope="col">Address</th>
@@ -42,7 +38,7 @@
                                                 <td>{{teacher.updated_at}}</td>
 												<td>
                                                 <a href="/editteacher/{{teacher.admin.id}}"><i class="align-middle" data-feather="edit-2"></i></a>
-												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+												<a href="/deleteteacher/{{teacher.admin.id}}"><i class="align-middle" data-feather="trash"></i></a>
                                                 </td>
 											</tr>
                                             {% endfor %}
