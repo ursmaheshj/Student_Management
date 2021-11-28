@@ -5,7 +5,7 @@
 <main class="content">
 				<div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3">Add Notification for Students and Teacher</h1>
+					<h1 class="h3 mb-3">Add Notification for Students and Teachers</h1>
 
 					<div class="row">
 						<div class="col-md-12">
@@ -16,7 +16,7 @@
 						{% endfor %}
 						{% endif %}
 								<div class="card-body">
-									<form action="/savenotification" method="POST">
+									<form action="/t_savenotification" method="POST">
 									{% csrf_token %}
 										<div class="mb-3">
 											<label class="form-label">Notification heading</label>

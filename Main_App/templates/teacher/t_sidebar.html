@@ -1,20 +1,20 @@
 <nav id="sidebar" class="sidebar">
 			<div class="sidebar-content js-simplebar">
 				<a class="sidebar-brand" href="/">
-          <span class="align-middle">Student Management</span>
+          <span class="align-middle">Kagne Coaching</span>
         </a>
 
 				<ul class="sidebar-nav">
 					
 
 					<li class="sidebar-item active">
-						<a class="sidebar-link" href="/adminhome">
-              <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
-            </a>
+						<a class="sidebar-link" href="/teacherhome">
+						<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+						</a>
 					</li>
 
 					<li class="sidebar-header">
-						Pages
+						Menu
 					</li>
 
 					<li class="sidebar-item">
@@ -24,52 +24,42 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="/viewstudent">
+						<a class="sidebar-link" href="/t_viewstudent">
 						<i class="align-middle" data-feather="users"></i> <span class="align-middle">View Student</span>
 						</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="/t_addnotification">
-						<i class="align-middle" data-feather="message-circle"></i> <span class="align-middle">Add Notification</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="/managenotification">
-						<i class="align-middle" data-feather="message-square"></i> <span class="align-middle">Manage Notifications</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-blank.html">
-						<i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
-						</a>
-					</li>
-
-					<li class="sidebar-header">
-						Tools & Components
-					</li>
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="icons-feather.html">
-              <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Icons</span>
-            </a>
-					</li>
-
-					<li class="sidebar-item">
 						<a data-target="#forms" data-toggle="collapse" class="sidebar-link collapsed">
-              <i class="align-middle" data-feather="check-circle"></i> <span class="align-middle">Forms</span>
-            </a>
+						<i class="align-middle" data-feather="bell"></i> <span class="align-middle">Notification</span>
+						</a>
 						<ul id="forms" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="forms-layouts.html">Form Layouts</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="forms-basic-inputs.html">Basic Inputs</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/t_addnotification">Add</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/t_deletenotification">Delete</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/t_viewnotification">View all</a></li>
 						</ul>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="tables-bootstrap.html">
-              <i class="align-middle" data-feather="list"></i> <span class="align-middle">Tables</span>
-            </a>
+						<a data-target="#result" data-toggle="collapse" class="sidebar-link collapsed">
+						<i class="align-middle" data-feather="server"></i> <span class="align-middle">Result</span>
+						</a>
+						<ul id="result" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="/t_addresult">Upload</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/t_deleteresult">Delete</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/t_viewresult">View all</a></li>
+						</ul>
+					</li>
+
+					<li class="sidebar-item">
+						<a data-target="#notes" data-toggle="collapse" class="sidebar-link collapsed">
+						<i class="align-middle" data-feather="server"></i> <span class="align-middle">Notes</span>
+						</a>
+						<ul id="notes" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="/t_addnotes">Upload</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/t_deletenotes">Delete</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/t_viewnotes">View all</a></li>
+						</ul>
 					</li>
 
 				</ul>

@@ -1,0 +1,41 @@
+{% extends 'student/s_base.html' %}
+
+{% block content %}
+
+<main class="content">
+        <div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">Notifications</h1>
+					<div class="col-12">
+							<div class="card">
+							
+								<div class="table-responsive">
+									<table class="table table-striped mb-0 ">
+										<thead>
+											<tr>
+												<th scope="col">Heading</th>
+												<th scope="col">Message</th>
+												<th scope="col">Created by</th>
+												<th scope="col">Created At</th>
+											</tr>
+										</thead>
+										<tbody>
+                                        {% for notification in notifications %}
+											<tr>
+												<td>{{notification.heading}}</td>
+												<td>{{notification.message}}</td>
+												<td>{{notification.created_by}}</td>
+                                                <td>{{notification.created_at}}</td>
+											</tr>
+                                            {% endfor %}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+			
+</main>
+
+{% endblock %}

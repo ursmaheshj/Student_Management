@@ -1,0 +1,48 @@
+{% extends 'teacher/t_base.html' %}
+
+{% block content %}
+
+<main class="content">
+        <div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">View all Notes</h1>
+					<div class="col-12">
+							<div class="card">
+								<div class="table-responsive">
+									<table class="table table-striped mb-0 ">
+										<thead>
+											<tr>
+												<th scope="col">Title</th>
+												<th scope="col">Class</th>
+												<th scope="col">Medium</th>
+												<th scope="col">Created By</th>
+												<th scope="col">Created At</th>
+												<th scope="col">File</th>
+											</tr>
+										</thead>
+										<tbody>
+                                        {% for note in notes %}
+											<tr>
+												<th scope="row">{{note.title}}</th>
+												<td>{{note.std}}</td>
+												<td>{{note.medium}}</td>
+												<td>{{note.created_by}}</td>
+												<td>{{note.created_at}}</td>
+												<td>
+												<a href="/media/{{note.file}}" download>download</a>
+												</td>
+											</tr>
+                                            {% endfor %}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+			
+</main>
+			
+
+
+{% endblock %}

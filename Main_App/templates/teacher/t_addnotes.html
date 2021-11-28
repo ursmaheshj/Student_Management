@@ -5,7 +5,7 @@
 <main class="content">
 				<div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3">Add Student</h1>
+					<h1 class="h3 mb-3">Add study material</h1>
 
 					<div class="row">
 						<div class="col-md-12">
@@ -16,19 +16,11 @@
 						{% endfor %}
 						{% endif %}
 								<div class="card-body">
-									<form action="/t_savestudent" method="POST">
+									<form action="/t_savenotes" method="POST" enctype="multipart/form-data">
 									{% csrf_token %}
 										<div class="mb-3">
-											<label class="form-label">Email address</label>
-											<input type="email" class="form-control" placeholder="Email" name="email" required>
-										</div>
-										<div class="mb-3">
-											<label class="form-label">First Name</label>
-											<input type="text" class="form-control" placeholder="First Name" name="firstname">
-										</div>
-										<div class="mb-3">
-											<label class="form-label">Last Name</label>
-											<input type="text" class="form-control" placeholder="Last Name" name="lastname">
+											<label class="form-label">Title</label>
+											<input type="text" class="form-control" placeholder="title" name="title" required>
 										</div>
 										<div class="mb-3">
 											<label class="form-label" for="medium">Medium</label>
@@ -48,21 +40,14 @@
 													{% endfor %}
 												</select>
 										</div>
+										
 										<div class="mb-3">
-											<label class="form-label" for="gender">Gender</label>
-												<select id="gender" class="form-control" name="gender" required>
-													<option value="" selected hidden>--Select--</option>
-													{% for k,v in genders %}
-													<option value={{k}}>{{v}}</option>
-													{% endfor %}
-												</select>
-										</div>
+											<label class="form-label">Study Material</label>
+											<input type="file" class="form-control" placeholder="Upload study material here" name="notes" required>
+                                            <small class="form-text text-muted">Upload study material here.</small>                                                
+                                        </div>
 										<div class="mb-3">
-											<label class="form-label">Address</label>
-											<input type="text" class="form-control" placeholder="Address" name="address">
-										</div>
-										<div class="mb-3">
-										<button type="submit" class="form-control btn btn-primary">Submit</button>
+										<button type="submit" class="form-control btn btn-primary">Upload</button>
 										</div>
 									</form>
 								</div>

@@ -1,0 +1,44 @@
+{% extends 'teacher/t_base.html' %}
+
+{% block content %}
+
+<main class="content">
+        <div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">Delete Notification</h1>
+					<div class="col-12">
+							<div class="card">
+								<div class="table-responsive">
+									<table class="table table-striped mb-0 ">
+										<thead>
+											<tr>
+												<th scope="col">ID</th>
+												<th scope="col">Heading</th>
+												<th scope="col">Message</th>
+												<th scope="col">Created At</th>
+                                                <th scope="col">Action</th>
+											</tr>
+										</thead>
+										<tbody>
+                                        {% for notification in notifications %}
+											<tr>
+												<th scope="row">{{notification.id}}</th>
+												<td>{{notification.heading}}</td>
+												<td>{{notification.message}}</td>
+                                                <td>{{notification.created_at}}</td>
+												<td>
+												<a href="/t_removenotification/{{notification.id}}"><i class="align-middle" data-feather="trash"></i></a>
+                                                </td>
+											</tr>
+                                            {% endfor %}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+			
+</main>
+
+{% endblock %}
