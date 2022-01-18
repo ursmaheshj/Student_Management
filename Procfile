@@ -1,1 +1,1 @@
-web: gunicorn Kagne_coaching.wsgi
+web: gunicorn Student_Management.wsgi
