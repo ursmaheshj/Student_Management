@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vs(wz%xrdk1uixb^(aq7i0nmh^m=n)+-x(s1!nmdt(a15i1i@3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['student-management-site.herokuapp.com']
 
 
 # Application definition
@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'Student_Management.wsgi.application'
 DATABASES = {
 'default': {
     'ENGINE': 'django.db.backends.postgresql',
-    'NAME': '',
-    'USER': '',
-    'PASSWORD': '',
-    'HOST': '',
+    'NAME': 'dpgup5gqsrt34',
+    'USER': 'xfdtxpkzouroxc',
+    'PASSWORD': '0129cdd455e3bb02447f9a25506d4bea6393e7d0cd2559ad70b3cae9e651d21c',
+    'HOST': 'ec2-174-129-37-144.compute-1.amazonaws.com',
     'PORT': '5432',
     }
 }
