@@ -5,6 +5,11 @@ Made with ❤️
 
 **<h2 align="center">  🚀<a href="https://student-management-site.herokuapp.com/" target='_blank'> Click here to try live demo.. </a></h2>**
 
+- now login using following credentials
+    - *Admin* ( admin@gmail.com - admin )
+    - *Teacher* ( teacher@gmail.com - Teacher@100 )
+    - *Student* ( student@gmail.com - Student@100 )
+
 </p>
 
 <hr>
@@ -25,10 +30,6 @@ Made with ❤️
 - clone this repo using : git clone https://github.com/ursmaheshj/Student_Management.git
 - change database settings to establish connection to default django sqlite.
 - run django app with : python manage.py runserver 
-- now login using following credentials
-    - *Admin* ( admin@gmail.com - admin )
-    - *Teacher* ( teacher@gmail.com - Teacher@100 )
-    - *Student* ( student@gmail.com - Student@100 )
 
 ## 🧐 Features
 - Userfriendly design
