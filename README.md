@@ -26,9 +26,9 @@ Made with ❤️
 - change database settings to establish connection to default django sqlite.
 - run django app with : python manage.py runserver 
 - now login using following credentials
-    - *Admin*
-    - *Teacher*
-    - *Student* 
+    - *Admin* ( admin@gmail.com - admin )
+    - *Teacher* ( teacher@gmail.com - Teacher@100 )
+    - *Student* ( student@gmail.com - Student@100 )
 
 ## 🧐 Features
 - Userfriendly design
