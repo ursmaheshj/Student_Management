@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
    
-    <link rel="stylesheet" type="text/css" href="{% static 'kagne/css/mycss.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'Main_App/css/mycss.css' %}" >
     <title>Login</title>
 </head>
 <body>
@@ -29,7 +29,7 @@
     <!-- Login Form -->
     <form action="/loginuser" method='POST'>
     {% csrf_token %}
-      <input type="text" id="email" class="fadeIn second" name="email" placeholder="email" required>
+      <input type="email" id="email" class="fadeIn second" name="email" placeholder="email" required>
       <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" required>
       <input type="submit" class="fadeIn fourth" value="Log In">
     </form>

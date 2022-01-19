@@ -129,22 +129,22 @@ def t_savestudent(request):
                 return HttpResponseRedirect("/addstudent")
         try :
             username = random_username()
-            user = MyUser.objects.create_user(username=username,password=password,email=email,first_name=firstname,last_name=lastname,is_admin=False,is_student=True)
+            user = MyUser.objects.create_user(username=username,password=password,email=email,first_name=firstname,last_name=lastname,user_type=3)
             user.student.address=address
             user.student.gender=gender   
             user.student.medium=medium 
             user.student.std=std      
             user.save()
 
-            template = render_to_string('base/email_template.html',{'name':firstname,'username':username,'password':password})
-            email = EmailMessage(
-                'Your account created successfully!',
-                template,
-                settings.EMAIL_HOST_USER,
-                [email]
-            )
-            email.fail_silently = False
-            email.send()
+            # template = render_to_string('base/email_template.html',{'name':firstname,'username':username,'password':password})
+            # email = EmailMessage(
+            #     'Your account created successfully!',
+            #     template,
+            #     settings.EMAIL_HOST_USER,
+            #     [email]
+            # )
+            # email.fail_silently = False
+            # email.send()
 
             messages.success(request,"Student added successfully")
             return HttpResponseRedirect("/t_addstudent")
@@ -185,7 +185,7 @@ def t_savenotification(request):
         try :
             heading = request.POST.get('heading')
             message = request.POST.get('message')
-            created_by = request.user.first_name
+            created_by = request.user.username
 
             notification = Notification.objects.create(heading=heading,message=message,created_by=created_by)
             notification.save()
@@ -244,7 +244,7 @@ def t_saveresult(request):
             medium = request.POST.get('medium')
             std = request.POST.get('std')
             resultfile = request.FILES['resultfile']
-            created_by = request.user.first_name
+            created_by = request.user.username
 
             result = Result.objects.create(title=title,file=resultfile,medium=medium,std=std,created_by=created_by)
             result.save()
@@ -301,7 +301,7 @@ def t_savenotes(request):
             medium = request.POST.get('medium')
             std = request.POST.get('std')
             file = request.FILES['notes']
-            created_by = request.user.first_name
+            created_by = request.user.username
 
             notes = Notes.objects.create(title=title,file=file,medium=medium,std=std,created_by=created_by)
             notes.save()

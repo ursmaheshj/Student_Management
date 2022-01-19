@@ -27,7 +27,7 @@ def is_teacher(func):
     def wrapper(request,*args,**kwargs):
         try:
             user = MyUser.objects.get(id=request.user.id)
-            if user.is_teacher == True:
+            if user.user_type == '2':
                 return func(request,*args,**kwargs)
             else:
                 return HttpResponse("<h3>You are not authorised to view this page</h3>")
@@ -39,7 +39,7 @@ def is_student(func):
     def wrapper(request,*args,**kwargs):
         try:
             user = MyUser.objects.get(id=request.user.id)
-            if user.is_student == True:
+            if user.user_type == '3':
                 return func(request,*args,**kwargs)
             else:
                 return HttpResponse("<h3>Log in as student to view this page</h3>")
