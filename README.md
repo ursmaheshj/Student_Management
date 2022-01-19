@@ -20,8 +20,13 @@ Made with ❤️
 
 ## 🛠️ Installation Steps 
 
- > How to install and download :
- 
+ > How to download and install :
+- To start you should atleast have python and django installed.
+- clone this repo using : git clone https://github.com/ursmaheshj/Student_Management.git
+- change database settings to establish connection to default django sqlite.
+- run django app with : python manage.py runserver 
+- now login using following credentials
+-- .
 
 ## 🧐 Features
 - Userfriendly design
