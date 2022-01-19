@@ -1,11 +1,11 @@
  **<h2 align="center">Student Management Site</h2>**
 <p align="center">
-Made with ❤️
+Made with Django and ❤️...
 </p>
 
 **<h2 align="center">  🚀<a href="https://student-management-site.herokuapp.com/" target='_blank'> Click here to try live demo.. </a></h2>**
 
-- now login using following credentials
+- login using following credentials
     - *Admin* ( admin@gmail.com - admin )
     - *Teacher* ( teacher@gmail.com - Teacher@100 )
     - *Student* ( student@gmail.com - Student@100 )
@@ -29,7 +29,9 @@ Made with ❤️
 - To start you should atleast have python and django installed.
 - clone this repo using : git clone https://github.com/ursmaheshj/Student_Management.git
 - change database settings to establish connection to default django sqlite.
-- run django app with : python manage.py runserver 
+- run migrate and collectstatic commands
+- after database creation create one superuser (defaultly assigned as Admin).
+- now you can login and add teachers and students.
 
 ## 🧐 Features
 - Userfriendly design
