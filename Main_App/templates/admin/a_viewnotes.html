@@ -1,11 +1,11 @@
-{% extends 'teacher/t_base.html' %}
+{% extends 'admin/a_base.html' %}
 
 {% block content %}
 
 <main class="content">
         <div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3">View all Notifications</h1>
+					<h1 class="h3 mb-3">View all Notes</h1>
 					<div class="col-12">
 
 						{% if messages %}
@@ -31,19 +31,29 @@
 									<table class="table table-striped mb-0 ">
 										<thead>
 											<tr>
-												<th scope="col">Heading</th>
-												<th scope="col">Message</th>
-												<th scope="col">Created At</th>
+												<th scope="col">Title</th>
+												<th scope="col">Class</th>
+												<th scope="col">Medium</th>
 												<th scope="col">Created By</th>
+												<th scope="col">Created At</th>
+												<th scope="col">Download</th>
+												<th scope="col">Remove</th>
 											</tr>
 										</thead>
 										<tbody>
-                                        {% for notification in notifications %}
+                                        {% for note in notes %}
 											<tr>
-												<td>{{notification.heading}}</td>
-												<td>{{notification.message}}</td>
-                                                <td>{{notification.created_at}}</td>
-												<td>{{notification.created_by}}</td>
+												<th scope="row">{{note.title}}</th>
+												<td>{{note.std}}</td>
+												<td>{{note.medium}}</td>
+												<td>{{note.created_by}}</td>
+												<td>{{note.created_at}}</td>
+												<td>
+												<a href="/media/{{note.file}}" download>download</a>
+												</td>
+												<td>
+												<a href="/a_removenotes/{{note.id}}"><i class="align-middle" data-feather="trash"></i></a>
+												</td>
 											</tr>
                                             {% endfor %}
 										</tbody>
@@ -55,5 +65,7 @@
 
 			
 </main>
+			
+
 
 {% endblock %}

@@ -28,9 +28,9 @@ class Teacher(models.Model):
     objects = models.Manager()
 
 class Student(models.Model):
-    medium_choices = (('Marathi','Marathi'),('Semi Eng','Semi Eng'),('CBSE','CBSE'))
+    medium_choices = (('Marathi','Marathi'),('SemiEng','SemiEng'),('CBSE','CBSE'),('Foundation','Foundation'))
     gender_choices = (('Male','Male'),('Female','Female'),('Other','Other'))
-    std_choices = ((1,1),(2,2),(3,3),(4,4),(5,5),(6,6))
+    std_choices = ((1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7),(8,8),(9,9),(10,10))
     id = models.AutoField(primary_key=True)
     admin = models.OneToOneField(MyUser,on_delete=models.CASCADE)
     gender = models.CharField(max_length=15,choices=gender_choices,default='Other')
@@ -50,6 +50,25 @@ class Notification(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     objects = models.Manager()
 
+class Result(models.Model):
+    std_choices = ((1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7),(8,8),(9,9),(10,10))
+    medium_choices = (('Marathi','Marathi'),('SemiEng','SemiEng'),('CBSE','CBSE'),('Foundation','Foundation'))
+    title = models.CharField(max_length=50)
+    file = models.FileField()
+    std = models.CharField(max_length=10,choices=std_choices)
+    medium = models.CharField(max_length=15 ,choices=medium_choices)
+    created_at = models.DateTimeField(auto_now_add=True)
+    created_by = models.TextField()
+
+class Notes(models.Model):
+    std_choices = ((1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7),(8,8),(9,9),(10,10))
+    medium_choices = (('Marathi','Marathi'),('SemiEng','SemiEng'),('CBSE','CBSE'),('Foundation','Foundation'))
+    title = models.CharField(max_length=50)
+    file = models.FileField()
+    std = models.CharField(max_length=10,choices=std_choices)
+    medium = models.CharField(max_length=15 ,choices=medium_choices)
+    created_at = models.DateTimeField(auto_now_add=True)
+    created_by = models.TextField()
 
 @receiver(post_save,sender=MyUser)
 def user_create(sender,instance,created,**kwargs):

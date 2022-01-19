@@ -8,17 +8,10 @@
 							<div class="col-auto">
 								<h3> Edit Profile </h3>
 							</div>
-
-							<div class="col-auto ml-auto text-right mt-n1">
-								<nav aria-label="breadcrumb">
-										<a href="/adminhome">Dashboard</a>
-								</nav>
-							</div>
 					</div>
 
 					<div class="row">
-						<div class="col-md-12">
-							
+						<div class="col-md-12">							
 								
 							{% if messages %}
 								<div class="alert alert-primary alert-dismissible" role="alert">
@@ -40,38 +33,32 @@
 
 							<div class="card">
 								<div class="card-body">
-									<form action="/t_saveprofile" method="POST">
+									<form action="/s_saveprofile" method="POST">
 									{% csrf_token %}
+										<div class="mb-3">
+											<label class="form-label">Student ID</label>
+											<input type="text" class="form-control" name="username" value="{{user.username}}" disabled>
+										</div>
+										<div class="mb-3">
+											<label class="form-label">Medium</label>
+											<input type="text" class="form-control" name="medium" value="{{user.student.medium}}" disabled>
+										</div>
+										<div class="mb-3">
+											<label class="form-label">Class</label>
+											<input type="text" class="form-control" name="class" value="{{user.student.std}}" disabled>
+										</div>
 										<div class="mb-3">
 											<label class="form-label">Email address</label>
 											<input type="email" class="form-control" placeholder="Email" name="email" value="{{user.email}}">
-											<input type="hidden" value="{{user.id}}" name="teacher_id">
+											<input type="hidden" value="{{user.id}}" name="student_id">
 										</div>
 										<div class="mb-3">
 											<label class="form-label">First Name</label>
-											<input type="text" class="form-control" placeholder="First Name" name="firstname" value="{{user.first_name}}">
+											<input type="text" class="form-control" placeholder="First Name" name="firstname" value="{{user.first_name}}" disabled>
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Last Name</label>
-											<input type="text" class="form-control" placeholder="Last Name" name="lastname" value="{{user.last_name}}">
-										</div>
-										<div class="mb-3">
-											<label class="form-label" for="medium">Medium</label>
-												<select id="medium" class="form-control" name="medium">
-													<option value="{{user.student.medium}}" hidden selected>{{user.student.medium}}</option>
-													{% for k,v in user.student.medium_choices %}
-													<option value={{k}}>{{v}}</option>
-													{% endfor %}
-												</select>
-										</div>
-										<div class="mb-3">
-											<label class="form-label" for="std">Class</label>
-												<select id="std" class="form-control" name="std">
-													<option value="{{user.student.std}}" hidden selected>{{user.student.std}}</option>
-													{% for k,v in user.student.std_choices %}
-													<option value={{k}}>{{v}}</option>
-													{% endfor %}
-												</select>
+											<input type="text" class="form-control" placeholder="Last Name" name="lastname" value="{{user.last_name}}" disabled>
 										</div>
 										<div class="mb-3">
 											<label class="form-label" for="gender">Gender</label>
@@ -87,7 +74,11 @@
 											<input type="text" class="form-control" placeholder="Address" name="address" value="{{user.student.address}}">
 										</div>
 										<div class="mb-3">
-										<button type="submit" class="form-control btn btn-primary">Update</button>
+											<label class="form-label">Password</label>
+											<input type="text" class="form-control" placeholder="Fill if you want to change password" name="password" >
+										</div>
+										<div class="mb-3">
+										<button type="submit" class="form-control btn btn-primary">Update profile</button>
 										</div>
 									</form>
 								</div>

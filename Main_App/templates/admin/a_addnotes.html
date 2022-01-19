@@ -1,15 +1,15 @@
-{% extends 'teacher/t_base.html' %}
+{% extends 'admin/a_base.html' %}
 
 {% block content %}
 
 <main class="content">
 				<div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3">Upload Result</h1>
+					<h1 class="h3 mb-3">Add study material</h1>
 
 					<div class="row">
 						<div class="col-md-12">
-
+							
 							{% if messages %}
 								<div class="alert alert-primary alert-dismissible" role="alert">
 									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -29,12 +29,13 @@
 							{% endif %}
 
 							<div class="card">
+							
 								<div class="card-body">
-									<form action="/t_saveresult" method="POST" enctype="multipart/form-data">
+									<form action="/a_savenotes" method="POST" enctype="multipart/form-data">
 									{% csrf_token %}
 										<div class="mb-3">
-											<label class="form-label">Exam Title</label>
-											<input type="text" class="form-control" placeholder="Exam title" name="title" required>
+											<label class="form-label">Title</label>
+											<input type="text" class="form-control" placeholder="title" name="title" required>
 										</div>
 										<div class="mb-3">
 											<label class="form-label" for="medium">Medium</label>
@@ -56,12 +57,12 @@
 										</div>
 										
 										<div class="mb-3">
-											<label class="form-label">Result</label>
-											<input type="file" class="form-control" placeholder="Upload result here" name="resultfile" required>
-                                            <small class="form-text text-muted">Upload result here.</small>                                                
+											<label class="form-label">Study Material</label>
+											<input type="file" class="form-control" placeholder="Upload study material here" name="notesfile" required>
+                                            <small class="form-text text-muted">Upload study material here.</small>                                                
                                         </div>
 										<div class="mb-3">
-										<button type="submit" class="form-control btn btn-primary">upload</button>
+										<button type="submit" class="form-control btn btn-primary">Upload</button>
 										</div>
 									</form>
 								</div>

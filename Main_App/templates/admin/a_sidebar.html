@@ -38,24 +38,32 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="/a_addnotification">
-						<i class="align-middle" data-feather="message-circle"></i> <span class="align-middle">Add Notification</span>
+						<a data-target="#notification" data-toggle="collapse" class="sidebar-link collapsed">
+						<i class="align-middle" data-feather="bell"></i> <span class="align-middle">Notification</span>
 						</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="/managenotification">
-						<i class="align-middle" data-feather="message-square"></i> <span class="align-middle">Manage Notifications</span>
-						</a>
+						<ul id="notification" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="/a_addnotification">Add</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/managenotification">Manage</a></li>
+						</ul>
 					</li>
 
 					<li class="sidebar-item">
 						<a data-target="#result" data-toggle="collapse" class="sidebar-link collapsed">
-						<i class="align-middle" data-feather="server"></i> <span class="align-middle">Results</span>
+						<i class="align-middle" data-feather="folder"></i> <span class="align-middle">Results</span>
 						</a>
 						<ul id="result" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
 							<li class="sidebar-item"><a class="sidebar-link" href="/a_addresult">Upload</a></li>
 							<li class="sidebar-item"><a class="sidebar-link" href="/a_viewresult">Delete</a></li>
+						</ul>
+					</li>
+
+					<li class="sidebar-item">
+						<a data-target="#notes" data-toggle="collapse" class="sidebar-link collapsed">
+						<i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Notes</span>
+						</a>
+						<ul id="notes" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="/a_addnotes">Upload</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="/a_viewnotes">Delete</a></li>
 						</ul>
 					</li>
 

@@ -7,6 +7,25 @@
 
 					<h1 class="h3 mb-3">Manage Notifications</h1>
 					<div class="col-12">
+
+						{% if messages %}
+								<div class="alert alert-primary alert-dismissible" role="alert">
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<div class="alert-icon">
+										<i data-feather="send"></i>
+									</div>
+									<div class="alert-message">
+										<strong>
+										{% for message in messages  %}
+										{{message}}
+										{% endfor %}
+										</strong> 
+									</div>
+								</div>
+							{% endif %}
+
 							<div class="card">
 								<div class="table-responsive">
 									<table class="table table-striped mb-0 ">

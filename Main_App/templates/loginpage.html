@@ -7,30 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
    
-    <link rel="stylesheet" type="text/css" href="{% static 'Main_App/css/mycss.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'kagne/css/mycss.css' %}" >
     <title>Login</title>
 </head>
 <body>
-<div class="wrapper fadeInDown">
+<div class="wrapper">
   <div id="formContent">
     <!-- Tabs Titles -->
 <div id="formHeader">
     <!-- Icon -->
-    <div class="fadeIn first">
-      <h5><b>Student Management Login<b><h5>
+    <div class="fadeIn first"><h3><strong> Student Management</strong></h3>
     </div> 
 </div>
 <h1></h1>
     {% if messages %}
     {% for message in messages %}
-    <div id="error"> {{message}} </div>
+    <div id="error" Class="fadeIn first"> {{message}} </div>
     {% endfor %}
     {% endif %}
    
     <!-- Login Form -->
     <form action="/loginuser" method='POST'>
     {% csrf_token %}
-      <input type="email" id="email" class="fadeIn second" name="email" placeholder="email" required>
+      <input type="text" id="email" class="fadeIn second" name="email" placeholder="email" required>
       <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" required>
       <input type="submit" class="fadeIn fourth" value="Log In">
     </form>

@@ -7,6 +7,25 @@
 
 					<h1 class="h3 mb-3">Manage Teachers</h1>
 					<div class="col-12">
+
+						{% if messages %}
+								<div class="alert alert-primary alert-dismissible" role="alert">
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<div class="alert-icon">
+										<i data-feather="send"></i>
+									</div>
+									<div class="alert-message">
+										<strong>
+										{% for message in messages  %}
+										{{message}}
+										{% endfor %}
+										</strong> 
+									</div>
+								</div>
+							{% endif %}
+
 							<div class="card">
 								<div class="table-responsive">
 									<table class="table table-striped mb-0 ">
@@ -22,6 +41,7 @@
 												<th scope="col">Created At</th>
                                                 <th scope="col">Updated At</th>
                                                 <th scope="col">Action</th>
+												<th scope="col">Remove</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -37,9 +57,12 @@
 												<td>{{teacher.created_at}}</td>
                                                 <td>{{teacher.updated_at}}</td>
 												<td>
-                                                <a href="/editteacher/{{teacher.admin.id}}"><i class="align-middle" data-feather="edit-2"></i></a>
-												<a href="/deleteteacher/{{teacher.admin.id}}"><i class="align-middle" data-feather="trash"></i></a>
+                                                <a href="/editteacher/{{teacher.admin.id}}"><i class="align-middle" data-feather="edit"></i></a>
+												<a href="/resetteacherpass/{{teacher.admin.id}}"><i class="align-middle" data-feather="rotate-cw"></i></a>
                                                 </td>
+												<td>
+												<a href="/deleteteacher/{{teacher.admin.id}}"><i class="align-middle" data-feather="trash"></i></a>
+												</td>
 											</tr>
                                             {% endfor %}
 										</tbody>

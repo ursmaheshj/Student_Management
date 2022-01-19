@@ -9,13 +9,27 @@
 
 					<div class="row">
 						<div class="col-md-12">
-							<div class="card">
+
 							{% if messages %}
-						{% for message in messages  %}
-						 {{message}}
-						{% endfor %}
-						{% endif %}
-								<div class="card-body">
+								<div class="alert alert-primary alert-dismissible" role="alert">
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<div class="alert-icon">
+										<i data-feather="send"></i>
+									</div>
+									<div class="alert-message">
+										<strong>
+										{% for message in messages  %}
+										{{message}}
+										{% endfor %}
+										</strong> 
+									</div>
+								</div>
+							{% endif %}
+
+							<div class="card">
+							<div class="card-body">
 									<form action="/a_saveresult" method="POST" enctype="multipart/form-data">
 									{% csrf_token %}
 										<div class="mb-3">

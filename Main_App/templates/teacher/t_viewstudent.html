@@ -7,12 +7,30 @@
 
 					<h1 class="h3 mb-3">View Students</h1>
 					<div class="col-12">
+
+						{% if messages %}
+								<div class="alert alert-primary alert-dismissible" role="alert">
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<div class="alert-icon">
+										<i data-feather="send"></i>
+									</div>
+									<div class="alert-message">
+										<strong>
+										{% for message in messages  %}
+										{{message}}
+										{% endfor %}
+										</strong> 
+									</div>
+								</div>
+							{% endif %}
+
 							<div class="card">
 								<div class="table-responsive">
 									<table class="table table-striped mb-0 ">
 										<thead>
 											<tr>
-												<th scope="col">ID</th>
 												<th scope="col">First Name</th>
 												<th scope="col">Last Name</th>
 												<th scope="col">Student Code</th>
@@ -29,7 +47,6 @@
 										<tbody>
                                         {% for student in students %}
 											<tr>
-												<th scope="row">{{student.admin.id}}</th>
 												<td>{{student.admin.first_name}}</td>
 												<td>{{student.admin.last_name}}</td>
 												<td>{{student.admin.username}}</td>
@@ -41,7 +58,7 @@
 												<td>{{student.created_at}}</td>
                                                 <td>{{student.updated_at}}</td>
 												<td>
-												<a href="#"><i class="align-middle" data-feather="rotate-cw"></i></a>
+												<a href="/t_resetspass/{{student.admin.id}}"><i class="align-middle" data-feather="rotate-cw"></i></a>
                                                 </td>
 											</tr>
                                             {% endfor %}
