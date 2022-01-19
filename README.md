@@ -37,6 +37,6 @@ Made with ❤️
 Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow); Create a branch, add commits, and [open a pull request](https://github.com/ursmaheshj/Student_Management/compare).
 
 ## 🙏 Support
-Dont hesitate to [fork](https://github.com/login?return_to=%2Fursmaheshj%2Student_Management) this repository and give a [star](https://github.com/login?return_to=%2Fursmaheshj%2FStudent_Management) if you like it..
+Dont hesitate to [fork](https://github.com/login?return_to=%2Fursmaheshj%2FStudent_Management) this repository and give a [star](https://github.com/login?return_to=%2Fursmaheshj%2FStudent_Management) if you like it..
 
 <hr>
