@@ -43,7 +43,7 @@ Made with Django and ❤️...
 - <a href="https://www.djangoproject.com/" target="blank">Django</a>
 - <a href="https://adminlte.io/" target="blank">Adminlte</a>
 - <a href="https://getbootstrap.com/" target="blank">Bootstrap</a>
-- <a href="https://www.heroku.com/home" target="blank">Bootstrap</a>
+- <a href="https://www.heroku.com/home" target="blank">Heroku</a>
 
 ## 🍰 Contributing
 
