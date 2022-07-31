@@ -1,10 +1,11 @@
- **<h2 align="center">Student Management Site</h2>**
+ <h2 align="center">Student Management Site</h2>
 <p align="center">
 Made with Django and ❤️...
 </p>
 
-**<h2 align="center">  🚀<a href="https://student-management-site.herokuapp.com/" target='_blank'> Click here to try live demo.. </a></h2>**
+<h2 align="center">  🚀<a href="https://student-management-site.herokuapp.com/" target='_blank'> Click here to try live demo.. </a></h2>
 
+<p>
 - login using following credentials
     - *Admin* ( admin@gmail.com - admin )
     - *Teacher* ( teacher@gmail.com - Teacher@100 )
