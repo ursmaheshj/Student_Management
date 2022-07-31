@@ -31,7 +31,7 @@ Made with ❤️ using Django
 
  > How to download and install :
 - To start you should atleast have python and django installed.
-- clone this repo using : git clone https://github.com/ursmaheshj/Student_Management.git
+- clone this repo using : git clone https://github.com/ursmaheshj/Student_Management.git or download zip/tar
 - change database settings to establish connection to default django sqlite.
 - run migrate and collectstatic commands
 - after database creation create one superuser (defaultly assigned as Admin).
@@ -45,22 +45,21 @@ Made with ❤️ using Django
 
 ### About the Platform
 
-It contains a basic home page with some details regarding the features and how site works to actually try the demo Login by pressing the login button.
+It consists of a simple home page with some information regarding the site's functionality and features.
 
-
-- **Login Page**: Login button redirects you to the login page where, user should provide their email and password as credentials.
+- **Login Page**: The Login button takes you to the login page, where you must enter your email address and password as credentials.
 
 ![Image](images/login.png)
 
-- **Admin Dashboard**: Admins can manage both student and teacher along with all the rights to modify and manage all the configurations.
+- **Admin Dashboard**: Admin have the ability to manage both students and teachers, in addition to having full access to edit and administer all configuration settings.
 
 ![Image](images/admin.png)
 
-- **Teacher Dashboard**: Teachers can manage students and their Marks, Notes etc.
+- **Teacher Dashboard**: The teachers are able to keep track of the students grades, notes, and other information.
 
 ![Image](images/teacher.png)
 
-- **Student Dashboard**: Students can login and view their Marks, Notes and Notifications.
+- **Student Dashboard**: Students can log in to their accounts in order to access their grades, notes, and notifications.
 
 ![Image](images/student.png)
 
