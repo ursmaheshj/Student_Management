@@ -1,5 +1,5 @@
 <p align="center">
-Made with Django and ❤️...
+Made with ❤️ using Django
 </p>
 
 <h2 align="center">  🚀<a href="https://student-management-site.herokuapp.com/" target='_blank'> Click here to try live demo.. </a></h2>
@@ -25,7 +25,7 @@ Made with Django and ❤️...
 
 ### Flow Diagram
 
-![Image](images/flowdiagram.jpg)
+![Image](images/flowdiagram.png)
 
 ## 🛠️ Installation Steps 
 
