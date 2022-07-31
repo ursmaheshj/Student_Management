@@ -23,6 +23,10 @@ Made with Django and ❤️...
 </p>
 <hr>
 
+### Flow Diagram
+
+![Image](images/flowdiagram.jpg)
+
 ## 🛠️ Installation Steps 
 
  > How to download and install :
@@ -38,6 +42,27 @@ Made with Django and ❤️...
 - Simple and Elegant UI
 - Provided with Admin, Teacher and Student portfolios
 - Default Authentication
+
+### About the Platform
+
+It contains a basic home page with some details regarding the features and how site works to actually try the demo Login by pressing the login button.
+
+
+- **Login Page**: Login button redirects you to the login page where, user should provide their email and password as credentials.
+
+![Image](images/login.png)
+
+- **Admin Dashboard**: Admins can manage both student and teacher along with all the rights to modify and manage all the configurations.
+
+![Image](images/admin.png)
+
+- **Teacher Dashboard**: Teachers can manage students and their Marks, Notes etc.
+
+![Image](images/teacher.png)
+
+- **Student Dashboard**: Students can login and view their Marks, Notes and Notifications.
+
+![Image](images/student.png)
 
 ## 💻 Built with
 - <a href="https://www.djangoproject.com/" target="blank">Django</a>
