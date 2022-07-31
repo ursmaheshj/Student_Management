@@ -1,4 +1,5 @@
 theme: jekyll-theme-slate
+title: "Student Management Project"
 show_downloads: true
 github:
   zip_url: zipball/master
