@@ -2,8 +2,7 @@
 Made with ❤️ using Django
 </p>
 
-<h2 align="center">  🚀<a href="https://student-management-site.herokuapp.com/" target='_blank'> Click here to try live demo.. </a></h2>
-
+<h2 align="center">  🚀<a href="https://student-management-site.herokuapp.com/loginpage/" target='_blank'> Click here to try live demo.. </a></h2>
 
 - login using following credentials
     - *Admin* ( admin@gmail.com - admin )
