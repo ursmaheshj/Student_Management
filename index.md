@@ -1,7 +1,7 @@
 <p align="center">
 Made with ❤️ using Django
 </p>
-
+<!--
 <h2 align="center">  🚀<a href="https://student-management-site.herokuapp.com/loginpage/" target='_blank'> Click here to try live demo.. </a></h2>
 
 - login using following credentials
@@ -12,7 +12,7 @@ Made with ❤️ using Django
 
 
 <hr>
-
+-->
 <p align="center">
     <a href="https://github.com/ursmaheshj/Student_Management/issues/new/choose" target="blank">Report Bug</a>
     ·
