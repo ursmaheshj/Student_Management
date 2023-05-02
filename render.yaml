@@ -1,4 +1,4 @@
-  ## This file is required for deploying application to Render
+  # This file is required for deploying application to Render
   databases:
   - name: mysite
     databaseName: mysite
