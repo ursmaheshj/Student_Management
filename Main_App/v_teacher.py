@@ -164,7 +164,7 @@ def t_resetspass(request,student_id):
     try:
         user = MyUser.objects.get(id=student_id)
         user.set_password("Student@100")
-        messages.success(request,"Password reset successfully")
+        messages.success(request,"Password reset successfully to Student@100")
         return HttpResponseRedirect("/t_viewstudent")
     except :
         messages.error(request,"Failed to reset password")

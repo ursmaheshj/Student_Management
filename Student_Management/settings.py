@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vs(wz%xrdk1uixb^(aq7i0nmh^m=n)+-x(s1!nmdt(a15i1i@3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['student-management-site.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',   #Used to serve static files on production
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -76,23 +76,25 @@ WSGI_APPLICATION = 'Student_Management.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-'default': {
-    'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'dpgup5gqsrt34',
-    'USER': 'xfdtxpkzouroxc',
-    'PASSWORD': '0129cdd455e3bb02447f9a25506d4bea6393e7d0cd2559ad70b3cae9e651d21c',
-    'HOST': 'ec2-174-129-37-144.compute-1.amazonaws.com',
-    'PORT': '5432',
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+#Below setting is used for postgresql database 
+# DATABASES = {   
+# 'default': {
+#     'ENGINE': 'django.db.backends.postgresql',
+#     'NAME': 'dpgup5gq4e5rsrt34',
+#     'USER': 'xfdtxpsdfkzouroxc',
+#     'PASSWORD': '0129cdd455dsfsdfe3bb02447f9a25506d4bea6393e7d0cd2559ad70b3cae9e651d21c',
+#     'HOST': 'ec2-170-129-37-144.compute-1.amazonaws.com',
+#     'PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

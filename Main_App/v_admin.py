@@ -147,7 +147,7 @@ def resetteacherpass(request,teacher_id):
         
         user.set_password(password)
         user.save()
-        messages.success(request,"Password reset successfully")
+        messages.success(request,"Password reset successfully to Teacher@100")
         return HttpResponseRedirect("/manageteacher")
     except :
         messages.error(request,"Failed to reset password")
@@ -275,7 +275,7 @@ def resetstudentpass(request,student_id):
         user = MyUser.objects.get(id=student_id)
         user.set_password(password)
         user.save()
-        messages.success(request,"Password reset successfully")
+        messages.success(request,"Password reset successfully to Student@100")
         return HttpResponseRedirect("/managestudent")
     except :
         messages.error(request,"Failed to reset password")
