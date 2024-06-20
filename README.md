@@ -28,9 +28,8 @@ Made with Django and ❤️...
  > How to download and install :
 - To start you should atleast have python and django installed.
 - clone this repo using : git clone https://github.com/ursmaheshj/Student_Management.git
-- change database settings to establish connection to default django sqlite.
 - run migrate and collectstatic commands
-- after database creation create one superuser (defaultly assigned as Admin).
+- after database creation create one superuser (please give email also).
 - now you can login and add teachers and students.
 
 ## 🧐 Features
