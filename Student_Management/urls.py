@@ -22,7 +22,7 @@ from Main_App import views,v_admin,v_student,v_teacher
 
 urlpatterns = [
     #Common URL's
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls), Not using default admin panel
     path('', views.loginpage),
     path('loginuser',views.loginuser),
     path('logoutuser',views.logoutuser),
