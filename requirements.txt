@@ -1,8 +1,5 @@
-Django==3.2.6
-# psycopg2==2.9.2 Uncomment this and comment 'psycopg2-binary' if running on linux
-psycopg2-binary
-pywin32-ctypes==0.2.0
-sqlparse==0.4.1
-gunicorn==20.1.0
-whitenoise==5.3.0
-legacy-cgi==2.6.4
+asgiref==3.11.1
+Django==6.0.3
+sqlparse==0.5.5
+tzdata==2025.3
+whitenoise==6.12.0

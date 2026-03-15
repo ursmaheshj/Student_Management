@@ -27,7 +27,7 @@ def loginuser(request):
                 return HttpResponse("Invalid user type")
         else :
             messages.error(request,"Invalid login details..!")
-            return HttpResponseRedirect("/loginpage")
+            return HttpResponseRedirect("/")
 
 def logoutuser(request):
     logout(request)

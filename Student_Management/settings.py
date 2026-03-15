@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'Main_App',
 ]
 
@@ -84,14 +83,14 @@ DATABASES = {
 }
 
 
-#Below setting is used for postgresql database 
+#Below setting is used for postgresql database (Values are random, not actual values, you can replace them with your actual database credentials)
 # DATABASES = {   
 # 'default': {
 #     'ENGINE': 'django.db.backends.postgresql',
 #     'NAME': 'dpgup5gq4e5rsrt34',
 #     'USER': 'xfdtxpsdfkzouroxc',
 #     'PASSWORD': '0129cdd455dsfsdfe3bb02447f9a25506d4bea6393e7d0cd2559ad70b3cae9e651d21c',
-#     'HOST': 'ec2-170-129-37-144.compute-1.amazonaws.com',
+#     'HOST': 'ec2-3-216-229-149.compute-1.amazonaws.com',
 #     'PORT': '5432',
 #     }
 # }
@@ -113,7 +112,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -138,7 +136,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'  # Used to serve static files on production
 
 # Auth User Model
 AUTH_USER_MODEL = "Main_App.MyUser"
