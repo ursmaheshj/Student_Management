@@ -104,6 +104,7 @@ def saveteacher(request):
             user.teacher.gender=gender        
             user.save()
             
+            #code to send email to teacher with login credentials
             # template = render_to_string('base/email_template.html',{'name':firstname,'username':username,'password':password})
             # email = EmailMessage(
             #     'Your account created successfully!',
@@ -232,9 +233,10 @@ def savestudent(request):
         user.student.std=std      
         user.save()
         
+        # Code to send email to student with login credentials
         # template = render_to_string('base/email_template.html',{'name':firstname,'username':username,'password':password})
         # email = EmailMessage(
-        #     'Kagne Coaching account creation!',
+        #     'Account creation successful!',
         #     template,
         #     settings.EMAIL_HOST_USER,
         #     [email]
