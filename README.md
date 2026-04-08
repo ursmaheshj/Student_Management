@@ -16,8 +16,6 @@
 ## 🌟 Overview
 This platform streamlines communication between administrators, teachers, and students. It features a professional dashboard for managing academic results, notes, and real-time notifications.
 
-
-
 ## 🧐 Key Features
 - **Multi-Role Dashboards:** Customized interfaces for Admin, Teacher, and Student.
 - **Secure Auth:** Email-based authentication with role-based access control.
@@ -25,8 +23,6 @@ This platform streamlines communication between administrators, teachers, and st
 - **Responsive Design:** Fully adaptive UI
 
 ## 🛠️ Installation and Usage
-
-### Getting Started
 
 Before you begin, ensure you have **Python** and **Django** installed on your system.
 
@@ -59,7 +55,6 @@ Before you begin, ensure you have **Python** and **Django** installed on your sy
 - <a href="https://www.djangoproject.com/" target="blank">Django</a>
 - <a href="https://adminlte.io/" target="blank">Adminlte</a>
 - <a href="https://getbootstrap.com/" target="blank">Bootstrap</a>
-- <a href="https://www.heroku.com/home" target="blank">Heroku</a>
 
 ---
 
